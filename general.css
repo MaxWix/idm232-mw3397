@@ -17,30 +17,24 @@ body {
   margin: 0;
 }
 
-/* Nav */
-.nav-container {
-  width: 90%;
-  margin: 0;
-}
+/* Header */
 
-header {
-  background-color: #fffbf7;
-  height: auto;
-}
 
-header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 .logo {
-  float: left;
-  margin: 1rem;
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 4rem;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  width: 30rem;
+  text-align: center;
   color: green;
 }
+
+.logo:hover {
+  cursor: pointer;
+}
+
 
 a:link { 
 	text-decoration: none;
@@ -59,15 +53,15 @@ a:hover {
 	color: green;
 }
 
-ssd
+
 a:active { 
 	text-decoration: none; 
 	color: green;
 }
 
-nav {
+/* nav {
   float: right;
-}
+} */
 
 nav ul {
   margin: 0;
@@ -84,7 +78,7 @@ nav li {
 
 /* Hero Image */
 .hero {
-  background-image: url("images/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg");
+  background-image: url("images/hero3.jpeg");
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
@@ -94,14 +88,18 @@ nav li {
   margin: 0 0 3rem 0;
 }
 
+
+
 .heroText {
   text-align: center;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -20%);
-  color: white;
+  color: black;
   font-size: 7rem;
+  stroke: 10px #1a1a1a;
+  line-height: 6.5rem;
 }
 
 .searchBar {
@@ -161,23 +159,39 @@ input[type="text"] {
   background-position: center center;
   height: 50vh;
   max-width: 75vw;
+  transition: transform 400ms ease-out;
+}
 
-  
+.featureImg:hover {
+	transform: scale(1.01);
+}
+
+.featureImg:hover {
+  cursor: pointer;
 }
 
 .featureText {
   padding-left: 2rem;
   margin: 0;
+  padding-top: 0;
 }
 
 .rod {
-	margin: 0;
-	font-size: 1.5rem;
+	margin: 0 0 1rem 0;
+	font-size: 3rem;
+  color: green;
+  
 }
 
 .featureRecipeTitle {
-	margin: 0;
+	margin: 0 0 2rem 0;
 	font-size: 5rem;
+  line-height: 4.5rem;
+}
+
+.featureRecipeTitle:hover {
+  color: rgb(76, 76, 76);
+  cursor: pointer;
 }
 
 .featureRecipeDescription{
@@ -203,17 +217,17 @@ input[type="text"] {
 
 .filter a {
 	padding: .5rem 1rem;
-	background-color: black;
-	color: white;
+	background-color: #fafafa;
+	color: green;
 	margin-right: .5rem;
 	border-radius: 3px;
 	text-decoration: none;
 	font-size: 1.5rem;
-	
+	outline: .25px solid grey;
 }
 
-.filter a[aria-current] {
-	background: blue;
+.filter a:hover {
+  background-color: rgb(207, 207, 207);
 }
 
 
@@ -223,21 +237,21 @@ input[type="text"] {
   flex-wrap: wrap;
   /* Compensate for excess margin on outer gallery flex items */
   /* margin: -1rem -1rem; */
-  max-width: 100rem;
+  /* max-width: 100rem; */
   margin: 0 auto;
   padding: 0 3rem 3rem 3rem;
   
 }
 
 .gallery-item {
-  /* Minimum width of 24rem and grow to fit available space */
-  flex: 1 0 24rem;
-  /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-  margin: 1rem;
+  flex: 0 0 30%; /* Set the width for each item */
+  width: 100%; /* Fixed width for each item */
+  margin: 1.5%; /* Adjust the margin to create some spacing between items */
   overflow: hidden;
   border-radius: 10px;
   outline: .25px solid grey;
-  cursor: grab;
+  cursor: pointer;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 
@@ -275,17 +289,19 @@ input[type="text"] {
 }
 
 .recipeTitle {
-  margin: 1rem auto 0 auto;
+  margin: 1rem 2rem 0 auto;
+  font-size: 3rem;
 }
 
 /* .recipeTitle:hover {
   color: red;
-  cursor: grab;
+  cursor: pointer;
 } */
 
 .recipeDescription {
   margin-top: 0.5rem;
   color: black;
+  font-size: 1.5rem;
 }
 
 /* Filter Menu */
@@ -312,6 +328,67 @@ Remove or comment-out the code block below to see how the browser will fall-back
 	
   }
 }
+
+.footer-basic {
+  padding:40px 0;
+  background-color:#fafafa;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center; 
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+/* Credit to https://epicbootstrap.com/snippets/footer-basic */
 
 /* #content {
   text-align: center;
