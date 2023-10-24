@@ -7,24 +7,21 @@
   <body>
     <div class="head">
         <div class="navContainer">
-          <p class="logo">Whats cookin?</p>
+          <p class="logo">What's cookin?</p>
         </div>
     </div>
     <div class="hero">
       <h1 class="heroText">Find a Recipe</h1>
-      <div class="searchBar">
-        <input
-          type="text"
-          name="Whats cookin?"
-          placeholder="Search Recipes..."
-        />
-      </div>
+      <form class="searchBar">
+        <input type="text" name="Whats cookin?" placeholder="Search Recipes..." />
+        <button type="submited">Search</button>
+      </form>
     </div>
 
     <div class="featureRecipe">
-      <div class="featureImg">sss</div>
+      <div class="featureImg"></div>
       <div class="featureText">
-        <p class="rod">recipe of the day:</p>
+        <p class="rod">Recipe of the day:</p>
         <h1 class="featureRecipeTitle">Hoisin-Glazed Pork Chops</h1>
         <p class="featureRecipeDescription">
           with delightfully chewy wonton noodles tossed in a nutty, savory suace
@@ -48,7 +45,9 @@
         <a href="">Chicken</a>
         <a href="">Beef</a>
         <a href="">Pork</a>
-        <a href="">Vegetable</a>
+        <a href="">Fish</a>
+        <a href="">Vegitarian</a>
+        <a href="">Steak</a>
       </nav>
 
       <div class="gallery">
@@ -57,7 +56,7 @@
             <img
               class="gallery-image"
               src="images/0101_FPP_Chicken-Rice_97338_WEB_SQ.png"
-              alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
+              alt=""
             />
           </div>
           <figcaption class="recipeCaption">
@@ -70,7 +69,7 @@
           <div class="galleryImgContain">
             <img
               class="gallery-image"
-              src="images/beefMedallions.png"
+              src="images/beefMedallions.jpg"
               alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
             />
           </div>
@@ -84,7 +83,7 @@
           <div class="galleryImgContain">
             <img
               class="gallery-image"
-              src="images/broccoliBasil.png"
+              src="images/broccoliBasil.jpg"
               alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
             />
           </div>
@@ -98,7 +97,7 @@
           <div class="galleryImgContain">
             <img
               class="gallery-image"
-              src="images/BrocolliMozzarellaCalzones.png"
+              src="images/BrocolliMozzarellaCalzones.jpg"
               alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
             />
           </div>
@@ -112,7 +111,7 @@
           <div class="galleryImgContain">
             <img
               class="gallery-image"
-              src="images/bucatiniAlfredo.png"
+              src="images/bucatiniAlfredo.jpg"
               alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
             />
           </div>
@@ -126,7 +125,7 @@
           <div class="galleryImgContain">
             <img
               class="gallery-image"
-              src="images/bucatiniTomato.png"
+              src="images/bucatiniTomato.jpg"
               alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
             />
           </div>
@@ -140,7 +139,7 @@
           <div class="galleryImgContain">
             <img
               class="gallery-image"
-              src="images/cheesyEnchiladas.png"
+              src="images/cheesyEnchiladas.jpg"
               alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
             />
           </div>
@@ -154,7 +153,7 @@
           <div class="galleryImgContain">
             <img
               class="gallery-image"
-              src="images/crispyFishSandwhiches.png"
+              src="images/crispyFishSandwhiches.jpg"
               alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
             />
           </div>
@@ -170,7 +169,7 @@
           <div class="galleryImgContain">
             <img
               class="gallery-image"
-              src="images/generalTsos.png"
+              src="images/generalTsos.jpg"
               alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"
             />
           </div>
@@ -193,7 +192,7 @@
     <div id="content">
       <figure class="oneRec">
         <img
-          src="images/0101_FPP_Chicken-Rice_97338_WEB_SQ.png"
+          src="images/0101_FPP_Chicken-Rice_97338_WEB_SQ.jpg"
           alt="FPP Chicken Rice"
         />
         <figcaption>Ancho-Orange Chicken</figcaption>
@@ -201,7 +200,7 @@
 
       <figure class="oneRecOdd">
         <img
-          src="images/0101_FPP_Chicken-Rice_97338_WEB_SQ.png"
+          src="images/0101_FPP_Chicken-Rice_97338_WEB_SQ.jpg"
           alt="FPP Chicken Rice"
         />
         <figcaption>Ancho-Orange Chicken</figcaption>
@@ -209,7 +208,7 @@
 
       <figure class="oneRec">
         <img
-          src="images/0101_FPP_Chicken-Rice_97338_WEB_SQ.png"
+          src="images/0101_FPP_Chicken-Rice_97338_WEB_SQ.jpg"
           alt="FPP Chicken Rice"
         />
         <figcaption>Ancho-Orange Chicken</figcaption>
@@ -218,12 +217,12 @@
 
     <div class="footer-basic">
       <footer>
-        <div class="social">
+        <!-- <div class="social">
           <a href="#"><i class="icon ion-social-instagram"></i></a
           ><a href="#"><i class="icon ion-social-snapchat"></i></a
           ><a href="#"><i class="icon ion-social-twitter"></i></a
           ><a href="#"><i class="icon ion-social-facebook"></i></a>
-        </div>
+        </div> -->
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Home</a></li>
           <li class="list-inline-item"><a href="#">Recipes</a></li>

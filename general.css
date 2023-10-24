@@ -109,13 +109,16 @@ nav li {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  width: 45vw;
 }
 
 .searchBar input {
-  width: 50vw;
+  
   height: 5rem;
   opacity: 70%;
   border-style: hidden;
+  float: left;
+  width: 70%;
 }
 
 input[type="text"] {
@@ -125,6 +128,40 @@ input[type="text"] {
   background-repeat: no-repeat;
   padding-left: 40px;
   font-size: 2rem;
+ 
+}
+
+form.searchBar button {
+  float: right;
+  
+  width: 30%;
+  padding: 10px;
+  background: green;
+  color: white;
+  font-size: 2rem;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  height: 5rem;
+}
+
+form.searchBar button:hover {
+  opacity: 80%;
+}
+
+@media screen and (max-width: 650px) {
+  .searchBar {
+    width: 75vw;
+  }
+
+  .heroText {
+    font-size: 4rem;
+    top: 30%;
+  }
+
+  /* .searchBar input {
+    width
+  } */
 }
 
 .heading {
@@ -154,7 +191,7 @@ input[type="text"] {
 }
 
 .featureImg {
-  background-image: url("images/0101_FPP_Chicken-Rice_97338_WEB_SQ.png");
+  background-image: url("images/hoisinGlazed.jpg");
   background-size: cover;
   background-position: center center;
   height: 50vh;
