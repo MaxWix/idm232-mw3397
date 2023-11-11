@@ -72,7 +72,7 @@ nav li {
 
 /* Hero Image */
 .hero {
-  background-image: url("images/hero3.jpeg");
+  background-image: url("../images/hero3.jpg");
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
@@ -113,7 +113,7 @@ nav li {
 }
 
 input[type="text"] {
-  background-image: url("images/searchIcon.png");
+  background-image: url("../images/searchIcon.png");
   background-size: 3rem;
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -265,6 +265,7 @@ form.searchBar button:hover {
   /* max-width: 100rem; */
   margin: 0 auto;
   padding: 0 3rem 3rem 3rem;
+  max-width: 120rem;
 }
 
 .gallery-item {
@@ -407,6 +408,17 @@ Remove or comment-out the code block below to see how the browser will fall-back
   font-size: 13px;
   color: white;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 680px) {
+  .gallery-item {
+    max-width: 40rem;
+  }
+
+  .heroText {
+    top: 25%;
+    line-height: 4rem;
+  }
 }
 
 /* Credit to https://epicbootstrap.com/snippets/footer-basic */
