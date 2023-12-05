@@ -15,6 +15,10 @@ ol {
   list-style: none;
 }
 
+strong {
+  font-weight: normal;
+}
+
 /* head */
 .logo {
   font-size: 3rem;
