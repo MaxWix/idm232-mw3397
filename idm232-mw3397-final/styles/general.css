@@ -563,6 +563,7 @@ url("images/0101_FPP_Chicken-Rice_97338_WEB_SQ.png");
   box-sizing: border-box; /* Ensure padding and border are included in the width */
   height: 45rem;
   max-width: 40rem;
+  transition: all 0.3s ease-out;
 }
 
 .gallery-image {
@@ -577,7 +578,7 @@ url("images/0101_FPP_Chicken-Rice_97338_WEB_SQ.png");
 
 .gallery-item:hover {
   box-shadow: 0rem 0rem 1.5rem 0.2rem rgba(0, 0, 0, 0.4);
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in;
 }
 
 .gallery-image:hover {

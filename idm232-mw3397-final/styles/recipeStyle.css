@@ -98,7 +98,12 @@ div.header {
 
 .recipeImgIntroCon {
   grid-column: page-start/page-end;
-  margin-bottom: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 0;
+}
+
+.recipeHero {
+  margin: 0;
 }
 
 .recipeImgIntro {
@@ -183,6 +188,10 @@ div.header {
   line-height: 1.45;
 }
 
+.stepHr {
+  opacity: 1;
+}
+
 .recipeDivider {
   border-top: 5px solid green;
   grid-column: col-start 1 / col-end 2;
@@ -205,6 +214,7 @@ div.header {
   line-height: 1.45;
   text-transform: uppercase;
   padding-top: 4px;
+  margin-bottom: -3rem;
 }
 
 .ingredientText {

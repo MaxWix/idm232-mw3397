@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PHP Detail</title>
+    <title>Recipe</title>
     <link rel="stylesheet" href="../styles/recipeStyle.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -25,7 +25,7 @@
   
   <div class="head">
       <div class="navContainer">
-        <a href="index.php"><p class="logo">What&#39;s cookin?</p></a> 
+        <a href="index.php"><p class="logo" id="logo">What&#39;s cookin?</p></a> 
       </div>
     </div>
 
@@ -52,7 +52,7 @@
             // Title
                 echo '<div class="recipecon">';
                 echo '<div class="recipeTitleIntro">';
-                echo '<a href="index.php"> <p class="back"> &#8592back </p> </a>';
+                echo '<a href="#"> <p class="back" id="back"> &#8592back </p> </a>';
                 echo '<div class="header">';
                 echo '<h2 class="headerTitle">' . 
             $oneRecipe['Title']. ' ' . $oneRecipe['Subtitle']. '</h2>';
@@ -60,7 +60,7 @@
                 echo '</div>';    
                
                 // Hero Image
-                echo '<div class="recipeImgIntroCon">';
+                echo '<div class="recipeImgIntroCon recipeHero">';
                 echo '<figure class="recipeImgIntro">';
                 echo '<div class="recipeImgIntroImg">';
                 echo '<img class="recipeImg" src="./images/'. $oneRecipe['Main IMG'].'"/>';
@@ -129,6 +129,7 @@
                 
                 
                 echo '<hr class="recipeDivider" />';
+                
                 echo ' <div class="prepCon">';
                 echo '<div>';
                 echo '<h2 class="ingredientsTitle">Preparation</h2>';
@@ -138,15 +139,16 @@
                 $StepImagesArray = explode("*", $oneRecipe['Step IMGs']);
                 // SEE HOW HE DOES THIS
                 $StepTextArray = explode("*", $oneRecipe['All Steps']);
-            
+                
                 for ($lp = 0; $lp < count($StepTextArray); $lp++) {
-                    // echo '<p class="stepDescriptionBody">' . $StepTextArray[$lp] . '</p>';
+                  // echo '<p class="stepDescriptionBody">' . $StepTextArray[$lp] . '</p>';
                     $firstchar = substr($StepTextArray[$lp], 0, 1);
-                    if (is_numeric($firstchar)) {
-                        echo '<div class="recipeImgIntroCon">';
+                    if (is_numeric($firstchar)) { 
+                      echo '<div class="recipeImgIntroCon">';
                         echo '<figure class="recipeImgIntro">';
                         echo '<div class="recipeImgIntroImg">';
                         // SEE HOW HE DOES THIS
+               
                         echo '<img class="recipeImg ingredientsImg"
                         src="./images/' . $StepImagesArray[$firstchar-1] . '" 
                         />';
@@ -154,17 +156,19 @@
                         echo '</figure>';
                         echo '</div>';
                     }
+                 
                     echo '<div class="stepDescription">';
                     echo '<p class="stepDescriptionBody">' . $StepTextArray[$lp] . '</p>';
                     echo '</div>';
-                    
-                   
                 }
+                 
 
            
-                
+                                echo '<a href="#"> <p class="back" id="goBack"> &#8592back </p> </a>';
                 echo '</div>';
+
                 echo '</div>';
+                 
                 echo '';
                 echo '';
                 echo '';
@@ -187,6 +191,7 @@
           echo '</div>';
 
         ?>
+        <script src="script.js"></script>
     </div>
     <div class="footer-basic">
       <footer>
@@ -204,5 +209,6 @@
         <p class="copyright">What&#39;s Cookin? © 2023</p>
       </footer>
     </div>
+
     </body>
     </html>

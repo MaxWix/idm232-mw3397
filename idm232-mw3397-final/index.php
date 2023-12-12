@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PHP Main Menu</title>
+    <title>What's Cookin?</title>
     <link rel="stylesheet" href="./styles/general.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -29,7 +29,7 @@
 
     <div class="head">
         <div class="navContainer">
-          <p class="logo">What's cookin?</p>
+           <a href="index.php"><p class="logo" id="logo">What&#39;s cookin?</p></a> 
         </div>
     </div>
     <div class="hero">
@@ -52,6 +52,7 @@
         <a href="index.php?filter=FISH">Fish</a>
         <a href="index.php?filter=VEGITARIAN">Vegetarian</a>
         <a href="index.php?filter=STEAK">Steak</a>
+        <a href="index.php?filter=Turkey">Turkey</a>
       </nav>
     </div>
 
@@ -69,7 +70,6 @@
         consoleMsg("Doing a SEARCH");
         // $query = "select * FROM recipes WHERE title LIKE '%{$search}%'";
         $query = "select * FROM recipes WHERE title LIKE '%{$search}%' OR subtitle LIKE '%{$search}%'";
-        $result = mysqli_query($connection, $query);
       } elseif (!empty($filter)) {
         consoleMsg("Doing a FILTER");
         $query = "select * FROM recipes WHERE proteine LIKE '%{$filter}%'";
